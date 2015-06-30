@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Project emblocks_ix="1.0.0" name="Nucleo_Weather">
+    <Target name="Nucleo_Weather" target="NUCLEO_F401RE">
+        <Source name="mbed.org" version="1.0.0">
+            <Toolchain name="GCC_ARM"/>
+            <CC>
+                <Switch name="-std=gnu99"/>
+                <Switch name="-c"/>
+                <Switch name="-Wall"/>
+                <Switch name="-Wextra"/>
+                <Switch name="-Wno-unused-parameter"/>
+                <Switch name="-Wno-missing-field-initializers"/>
+                <Switch name="-fmessage-length=0"/>
+                <Switch name="-fno-exceptions"/>
+                <Switch name="-fno-builtin"/>
+                <Switch name="-ffunction-sections"/>
+                <Switch name="-fdata-sections"/>
+                <Switch name="-MMD"/>
+                <Switch name="-fno-delete-null-pointer-checks"/>
+                <Switch name="-fomit-frame-pointer"/>
+                <Switch name="-mcpu=cortex-m4"/>
+                <Switch name="-mthumb"/>
+                <Switch name="-mfpu=fpv4-sp-d16"/>
+                <Switch name="-mfloat-abi=softfp"/>
+                <Switch name="-O2"/>
+                
+            </CC>
+            <CPPC>
+                <Switch name="-std=gnu++98"/>
+                <Switch name="-fno-rtti"/>
+                <Switch name="-c"/>
+                <Switch name="-Wall"/>
+                <Switch name="-Wextra"/>
+                <Switch name="-Wno-unused-parameter"/>
+                <Switch name="-Wno-missing-field-initializers"/>
+                <Switch name="-fmessage-length=0"/>
+                <Switch name="-fno-exceptions"/>
+                <Switch name="-fno-builtin"/>
+                <Switch name="-ffunction-sections"/>
+                <Switch name="-fdata-sections"/>
+                <Switch name="-MMD"/>
+                <Switch name="-fno-delete-null-pointer-checks"/>
+                <Switch name="-fomit-frame-pointer"/>
+                <Switch name="-mcpu=cortex-m4"/>
+                <Switch name="-mthumb"/>
+                <Switch name="-mfpu=fpv4-sp-d16"/>
+                <Switch name="-mfloat-abi=softfp"/>
+                <Switch name="-O2"/>
+                
+            </CPPC>
+            <Symbols>
+                <Symbol name="TARGET_NUCLEO_F401RE"/>
+                <Symbol name="TARGET_M4"/>
+                <Symbol name="TARGET_CORTEX_M"/>
+                <Symbol name="TARGET_STM"/>
+                <Symbol name="TARGET_STM32F4"/>
+                <Symbol name="TARGET_STM32F401RE"/>
+                <Symbol name="TOOLCHAIN_GCC_ARM"/>
+                <Symbol name="TOOLCHAIN_GCC"/>
+                <Symbol name="__CORTEX_M4"/>
+                <Symbol name="ARM_MATH_CM4"/>
+                <Symbol name="__FPU_PRESENT=1"/>
+                <Symbol name="MBED_BUILD_TIMESTAMP=1435646529.16"/>
+                <Symbol name="__MBED__=1"/>
+                <Symbol name="TARGET_FF_ARDUINO"/>
+                <Symbol name="TARGET_FF_MORPHO"/>
+                
+            </Symbols>
+            <LD>
+                <Switch name="-Wl,--gc-sections"/>
+                <Switch name="-Wl,--wrap,main"/>
+                <Switch name="-mcpu=cortex-m4"/>
+                <Switch name="-mthumb"/>
+                <Switch name="-mfpu=fpv4-sp-d16"/>
+                <Switch name="-mfloat-abi=softfp"/>
+                <Switch name="--specs=nano.specs"/>
+                <Switch name="-u_printf_float"/>
+                <Switch name="-u_scanf_float"/>
+                
+            </LD>
+            <Addobjects>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_dma.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/startup_STM32F40x.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_pcd.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_hash.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_cryp.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_usart.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_nor.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_uart.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_adc.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_rcc.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_flash.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_dac.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_rtc_ex.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_i2c.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/mbed_overrides.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_crc.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_ll_sdmmc.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_ll_fmc.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_ll_usb.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_i2s_ex.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_rtc.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_sd.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_sram.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_iwdg.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/board.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_pwr_ex.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_tim.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_eth.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_flash_ex.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_smartcard.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_dcmi.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/system_stm32f4xx.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_gpio.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_tim_ex.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_sdram.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_dma_ex.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/cmsis_nvic.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_dac_ex.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_hcd.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_pccard.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/hal_tick.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_hash_ex.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_ltdc.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_dma2d.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_rcc_ex.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/retarget.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_spi.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_cortex.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_irda.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_wwdg.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_sai.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_pcd_ex.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_pwr.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_cryp_ex.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_rng.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_nand.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_ll_fsmc.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_flash_ramfunc.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_adc_ex.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_i2s.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_can.o"/>
+                <Addobject name="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_i2c_ex.o"/>
+                
+            </Addobjects>
+            <Syslibs>
+                <Library name="stdc++"/>
+                <Library name="supc++"/>
+                <Library name="m"/>
+                <Library name="c"/>
+                <Library name="gcc"/>
+                <Library name="nosys"/>
+                
+            </Syslibs>
+            <Scriptfile path="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/NUCLEO_F401RE.ld"/>
+        </Source>
+        <Assembler>
+        </Assembler>
+        <Compiler>
+            <Includepaths>
+                <Includepath path="."/>
+                <Includepath path="SDFileSystem"/>
+                <Includepath path="SDFileSystem/FATFileSystem"/>
+                <Includepath path="SDFileSystem/FATFileSystem/ChaN"/>
+                <Includepath path="yajl"/>
+                <Includepath path="yajl/core"/>
+                <Includepath path="mbed"/>
+                <Includepath path="mbed/TARGET_NUCLEO_F401RE"/>
+                <Includepath path="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM"/>
+                <Includepath path="mbed/TARGET_NUCLEO_F401RE/TARGET_STM"/>
+                <Includepath path="mbed/TARGET_NUCLEO_F401RE/TARGET_STM/TARGET_NUCLEO_F401RE"/>
+                <Includepath path="WakeUp"/>
+                <Includepath path="WakeUp/Device"/>
+                <Includepath path="WakeUp/Device/LPC1114_WakeInterruptIn"/>
+                
+            </Includepaths>
+            <Symbols>
+            </Symbols>
+        </Compiler>
+        <Linker>
+            <Libraries>
+                <Library name="mbed"/>
+                
+            </Libraries>
+            <Librarypaths>
+                <Librarypath path="mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM"/>
+                
+            </Librarypaths>
+        </Linker>
+        <Files>
+            <File  name="SDFileSystem/SDFileSystem.h" type="h"/>
+            <File  name="SDFileSystem/FATFileSystem/FATFileSystem.h" type="h"/>
+            <File  name="SDFileSystem/FATFileSystem/FATFileHandle.h" type="h"/>
+            <File  name="SDFileSystem/FATFileSystem/FATDirHandle.h" type="h"/>
+            <File  name="SDFileSystem/FATFileSystem/MemFileSystem.h" type="h"/>
+            <File  name="SDFileSystem/FATFileSystem/ChaN/integer.h" type="h"/>
+            <File  name="SDFileSystem/FATFileSystem/ChaN/diskio.h" type="h"/>
+            <File  name="SDFileSystem/FATFileSystem/ChaN/ff.h" type="h"/>
+            <File  name="SDFileSystem/FATFileSystem/ChaN/ffconf.h" type="h"/>
+            <File  name="yajl/yajl_parse.h" type="h"/>
+            <File  name="yajl/yajl_common.h" type="h"/>
+            <File  name="yajl/yajl_gen.h" type="h"/>
+            <File  name="yajl/core/yajl_alloc.h" type="h"/>
+            <File  name="yajl/core/yajl_lex.h" type="h"/>
+            <File  name="yajl/core/yajl_encode.h" type="h"/>
+            <File  name="yajl/core/yajl_parser.h" type="h"/>
+            <File  name="yajl/core/yajl_buf.h" type="h"/>
+            <File  name="mbed/FileHandle.h" type="h"/>
+            <File  name="mbed/DirHandle.h" type="h"/>
+            <File  name="mbed/FileBase.h" type="h"/>
+            <File  name="mbed/mbed_error.h" type="h"/>
+            <File  name="mbed/PwmOut.h" type="h"/>
+            <File  name="mbed/Ethernet.h" type="h"/>
+            <File  name="mbed/can_helper.h" type="h"/>
+            <File  name="mbed/Timeout.h" type="h"/>
+            <File  name="mbed/sleep_api.h" type="h"/>
+            <File  name="mbed/spi_api.h" type="h"/>
+            <File  name="mbed/rtc_api.h" type="h"/>
+            <File  name="mbed/SerialBase.h" type="h"/>
+            <File  name="mbed/Ticker.h" type="h"/>
+            <File  name="mbed/toolchain.h" type="h"/>
+            <File  name="mbed/ethernet_api.h" type="h"/>
+            <File  name="mbed/Stream.h" type="h"/>
+            <File  name="mbed/gpio_api.h" type="h"/>
+            <File  name="mbed/PortOut.h" type="h"/>
+            <File  name="mbed/can_api.h" type="h"/>
+            <File  name="mbed/mbed_interface.h" type="h"/>
+            <File  name="mbed/mbed.h" type="h"/>
+            <File  name="mbed/DigitalInOut.h" type="h"/>
+            <File  name="mbed/CallChain.h" type="h"/>
+            <File  name="mbed/pinmap.h" type="h"/>
+            <File  name="mbed/AnalogOut.h" type="h"/>
+            <File  name="mbed/LocalFileSystem.h" type="h"/>
+            <File  name="mbed/DigitalIn.h" type="h"/>
+            <File  name="mbed/I2C.h" type="h"/>
+            <File  name="mbed/FilePath.h" type="h"/>
+            <File  name="mbed/BusInOut.h" type="h"/>
+            <File  name="mbed/analogout_api.h" type="h"/>
+            <File  name="mbed/mbed_debug.h" type="h"/>
+            <File  name="mbed/us_ticker_api.h" type="h"/>
+            <File  name="mbed/FileSystemLike.h" type="h"/>
+            <File  name="mbed/SPI.h" type="h"/>
+            <File  name="mbed/platform.h" type="h"/>
+            <File  name="mbed/InterruptIn.h" type="h"/>
+            <File  name="mbed/BusIn.h" type="h"/>
+            <File  name="mbed/FunctionPointer.h" type="h"/>
+            <File  name="mbed/serial_api.h" type="h"/>
+            <File  name="mbed/PortIn.h" type="h"/>
+            <File  name="mbed/Timer.h" type="h"/>
+            <File  name="mbed/AnalogIn.h" type="h"/>
+            <File  name="mbed/Serial.h" type="h"/>
+            <File  name="mbed/analogin_api.h" type="h"/>
+            <File  name="mbed/gpio_irq_api.h" type="h"/>
+            <File  name="mbed/SPISlave.h" type="h"/>
+            <File  name="mbed/TimerEvent.h" type="h"/>
+            <File  name="mbed/CAN.h" type="h"/>
+            <File  name="mbed/RawSerial.h" type="h"/>
+            <File  name="mbed/FileLike.h" type="h"/>
+            <File  name="mbed/pwmout_api.h" type="h"/>
+            <File  name="mbed/port_api.h" type="h"/>
+            <File  name="mbed/I2CSlave.h" type="h"/>
+            <File  name="mbed/mbed_assert.h" type="h"/>
+            <File  name="mbed/semihost_api.h" type="h"/>
+            <File  name="mbed/BusOut.h" type="h"/>
+            <File  name="mbed/InterruptManager.h" type="h"/>
+            <File  name="mbed/DigitalOut.h" type="h"/>
+            <File  name="mbed/wait_api.h" type="h"/>
+            <File  name="mbed/PortInOut.h" type="h"/>
+            <File  name="mbed/i2c_api.h" type="h"/>
+            <File  name="mbed/rtc_time.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_dcmi.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_dma2d.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_tim_ex.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_iwdg.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_rcc.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_rtc.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_dma.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_conf.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_flash.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_pwr_ex.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_sai.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/core_cm4_simd.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/core_cm0plus.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_usart.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_wwdg.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_pcd.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_hcd.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_i2s.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_hash.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_pwr.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/cmsis_nvic.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_flash_ramfunc.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/cmsis.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_hash_ex.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_sram.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_nor.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_sd.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_tim.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_ltdc.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_gpio.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_rng.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_adc.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_smartcard.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_cryp_ex.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_i2c_ex.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_rtc_ex.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_dac.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/system_stm32f4xx.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_can.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_sdram.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_spi.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_adc_ex.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_nand.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_ll_fsmc.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_i2s_ex.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_flash_ex.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_irda.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f401xe.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_dac_ex.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/core_cmFunc.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_crc.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_cortex.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/core_cm4.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_dma_ex.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_cryp.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_rcc_ex.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_def.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_ll_fmc.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_ll_usb.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/hal_tick.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_ll_sdmmc.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/core_cm0.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_pcd_ex.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/core_cmInstr.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_uart.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_gpio_ex.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_eth.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_i2c.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_pccard.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/core_cm3.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/TARGET_STM/TARGET_NUCLEO_F401RE/gpio_object.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/TARGET_STM/TARGET_NUCLEO_F401RE/PinNames.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/TARGET_STM/TARGET_NUCLEO_F401RE/objects.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/TARGET_STM/TARGET_NUCLEO_F401RE/PortNames.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/TARGET_STM/TARGET_NUCLEO_F401RE/PeripheralNames.h" type="h"/>
+            <File  name="mbed/TARGET_NUCLEO_F401RE/TARGET_STM/TARGET_NUCLEO_F401RE/device.h" type="h"/>
+            <File  name="WakeUp/WakeUp.h" type="h"/>
+            <File  name="WakeUp/Device/LPC1114_WakeInterruptIn/WakeInterruptIn.h" type="h"/>
+            <File  name="main.cpp" type="cpp"/>
+            <File  name="SDFileSystem/SDFileSystem.cpp" type="cpp"/>
+            <File  name="SDFileSystem/FATFileSystem/FATFileSystem.cpp" type="cpp"/>
+            <File  name="SDFileSystem/FATFileSystem/FATFileHandle.cpp" type="cpp"/>
+            <File  name="SDFileSystem/FATFileSystem/FATDirHandle.cpp" type="cpp"/>
+            <File  name="SDFileSystem/FATFileSystem/ChaN/ff.cpp" type="cpp"/>
+            <File  name="SDFileSystem/FATFileSystem/ChaN/ccsbcs.cpp" type="cpp"/>
+            <File  name="SDFileSystem/FATFileSystem/ChaN/diskio.cpp" type="cpp"/>
+            <File  name="WakeUp/Device/WakeUp_LPC11XX.cpp" type="cpp"/>
+            <File  name="WakeUp/Device/WakeUp_LPC812.cpp" type="cpp"/>
+            <File  name="WakeUp/Device/WakeUp_Freescale.cpp" type="cpp"/>
+            <File  name="WakeUp/Device/WakeUp_LPC11u24.cpp" type="cpp"/>
+            <File  name="WakeUp/Device/WakeUp_STM_RTC.cpp" type="cpp"/>
+            <File  name="WakeUp/Device/LPC1114_WakeInterruptIn/WakeInterruptIn.cpp" type="cpp"/>
+            <File  name="yajl/core/yajl_buf.c" type="c"/>
+            <File  name="yajl/core/yajl_parser.c" type="c"/>
+            <File  name="yajl/core/yajl_alloc.c" type="c"/>
+            <File  name="yajl/core/yajl_lex.c" type="c"/>
+            <File  name="yajl/core/yajl_encode.c" type="c"/>
+            <File  name="yajl/core/yajl.c" type="c"/>
+            <File  name="yajl/core/yajl_gen.c" type="c"/>
+            
+        </Files>
+    </Target>
+</Project>
